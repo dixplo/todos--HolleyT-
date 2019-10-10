@@ -79,7 +79,11 @@ public class TodoController {
 	public String indextds(ModelMap model) {
 		List<Todo> todos= todoRepo.findAll();
 		
-		vue.addMethod
+		VueJS.addMethod("addTodo, let self=this" +Http.post("/rest/todos/create", "this.todo", "self.dialog=false;"
+				+ "self.message='tache ajoutée';"
+				+ "self.snackbar=true;"
+				+"self.items.push(response.data);self.todo={};"));
+		
 		return "";
 	}
 	
