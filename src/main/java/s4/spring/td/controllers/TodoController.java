@@ -78,6 +78,7 @@ public class TodoController {
 	@RequestMapping("")
 	public String indextds(ModelMap model) {
 		List<Todo> todos= todoRepo.findAll();
+		VueJS.addData("items", todos);
 		
 		VueJS.addMethod("addTodo, let self=this" +Http.post("/rest/todos/create", "this.todo", "self.dialog=false;"
 				+ "self.message='tache ajoutée';"
