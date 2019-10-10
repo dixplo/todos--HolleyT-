@@ -1,0 +1,31 @@
+{{>header}}
+
+<div class="ui container segment">
+<form class="ui form" method="POST" action="/todo/task/add/">
+  <div class="field">
+    <label>label</label>
+    <input type="text" name="labeltodo" placeholder="Label">
+  </div>
+  <div class="field">
+    <label>Description</label>
+    <input type="text" name="Descriptiontodo" placeholder="Description">
+  </div>
+  <div class="field">
+    <label>Avancement</label>
+    <input type="text" name="Avancementtodo" placeholder="Avancement">
+  </div>
+  <div class="field">
+    <label>Poids</label>
+    <input type="text" name="Poidstodo" placeholder="Poids">
+  </div>
+  <div class="ui buttons">
+  <a class="ui button" href="/todo/index">Cancel</a>
+  <div class="or"></div>
+  <button class="ui positive button submit">Save</button>
+</div>
+  </div>
+
+</form>
+</div>
+
+{{>footer}}

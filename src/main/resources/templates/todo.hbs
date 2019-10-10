@@ -1,0 +1,33 @@
+{{>header}}
+
+<table class="ui celled table">
+  <thead>
+    <tr><th>Label</th>
+  </tr>
+  </thead>
+  <tbody>
+  <a class="ui black  button" href="tache/addTodo">+ Ajouter une Tache</a>
+{{#todos}}
+    <tr class="detail" data-id="{{id}}">
+      <td>{{label}}</td>
+      <td>{{description}}</td>
+    
+      <td><div class="ui teal progress" data-percent="/todo/addTodo/{{Avancement}}" id="example1">
+  			<div class="bar"></div>
+			</div></td>
+      <td>{{Avancement}}</td>
+      <td>
+  		<a class="circular ui icon button" href="/todo/update/{{id}}">
+  		<i class="icon edit"></i>
+		</a>
+		<a class="red circular ui icon button" href="/todo/delete/{{id}}">
+  		<i class="icon times"></i>
+		</a>
+		</td>
+    </tr>
+{{/todos}}
+  </tbody>
+</table>
+
+
+{{>footer}}

@@ -1,0 +1,24 @@
+{{>header}}
+
+<div class="ui container segment">
+<form class="ui form" method="POST" action="/todo/update">
+{{#todo}}
+  <div class="field">
+    <label>Name</label>
+    <input type="text" name="name" value="{{label}}">
+  </div>
+  <div class="field">
+    <label>Domain</label>
+    <input type="text" name="domain" value="{{description}}">
+  </div>
+  <div class="ui buttons">
+  <a class="ui button" href="/todo/index">Cancel</a>
+  <div class="or"></div>
+  <button class="ui positive button submit">Save</button>
+</div>
+  </div>
+ {{/todo}}
+</form>
+</div>
+
+{{>footer}}
